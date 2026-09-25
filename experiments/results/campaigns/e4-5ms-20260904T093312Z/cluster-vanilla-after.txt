@@ -1,0 +1,7 @@
+ok    20 vanilla-extended pods ready (min-scale 20)
+ok    no pending pods
+FAIL  kourier: 9 container restarts
+ok    update timers off
+ok    ingress -> vanilla-extended: 200
+ok    kourier: no per-request access log
+info  node cpu requests: 6250m (78%)

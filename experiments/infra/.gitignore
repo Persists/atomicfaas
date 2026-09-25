@@ -1,0 +1,8 @@
+# State records live infrastructure and can contain resource detail; the
+# lock file and provider plugins are environment-specific.
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.*
+terraform.tfvars
+*.auto.tfvars

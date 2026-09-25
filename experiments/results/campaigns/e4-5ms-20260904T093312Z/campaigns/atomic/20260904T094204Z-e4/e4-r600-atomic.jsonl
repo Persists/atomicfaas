@@ -1,0 +1,1 @@
+{"cancel_delay_ms":5,"cluster_host":"10.132.15.197","cut_s":180,"cut_tail_s":30,"delay_ms":5,"duration_s":810,"experiment":"e4-throughput","fail_every_n":0,"meta":true,"offered_rps":[50,100,150,200,250,300,350,400,450,500,550,600],"order_seed":1,"pause_s":600,"quiet_ms":750,"requests_per_cell":300,"settle_floor_ms":5000,"stop_below":0,"ts_utc":"2026-09-04T09:42:04Z"}

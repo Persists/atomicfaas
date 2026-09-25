@@ -1,0 +1,70 @@
+[
+  {
+    "docs": "Stripe-modeled: cancel is the documented inverse (docs.stripe.com/api/payment_intents/cancel)",
+    "match": {
+      "method": "POST",
+      "path": "/v1/payment_intents"
+    },
+    "tier": 1,
+    "inverse": {
+      "method": "POST",
+      "path": "/v1/payment_intents/{resp.id}/cancel"
+    }
+  },
+  {
+    "docs": "SendGrid-modeled send: no inverse exists -> defer until commit; a logged one floors",
+    "match": {
+      "method": "POST",
+      "path": "/v3/mail/send"
+    },
+    "tier": 0
+  },
+  {
+    "docs": "trip-booking workload (SeBS-Flow saga): cancel is the specified compensation for a hotel reservation",
+    "match": {
+      "method": "POST",
+      "path": "/hotel/reservations"
+    },
+    "tier": 1,
+    "inverse": {
+      "method": "POST",
+      "path": "/hotel/reservations/{resp.id}/cancel"
+    }
+  },
+  {
+    "docs": "trip-booking workload (SeBS-Flow saga): cancel is the specified compensation for a car reservation",
+    "match": {
+      "method": "POST",
+      "path": "/car/reservations"
+    },
+    "tier": 1,
+    "inverse": {
+      "method": "POST",
+      "path": "/car/reservations/{resp.id}/cancel"
+    }
+  },
+  {
+    "docs": "trip-booking workload (SeBS-Flow saga): cancel is the specified compensation for a flight reservation",
+    "match": {
+      "method": "POST",
+      "path": "/flight/reservations"
+    },
+    "tier": 1,
+    "inverse": {
+      "method": "POST",
+      "path": "/flight/reservations/{resp.id}/cancel"
+    }
+  },
+  {
+    "docs": "trip-booking workload: the trip record is removed by cancel when the booking aborts",
+    "match": {
+      "method": "POST",
+      "path": "/trip/confirmations"
+    },
+    "tier": 1,
+    "inverse": {
+      "method": "POST",
+      "path": "/trip/confirmations/{resp.id}/cancel"
+    }
+  }
+]

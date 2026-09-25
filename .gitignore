@@ -1,0 +1,13 @@
+.DS_Store
+/bin/
+/.venv/
+*.test
+*.prof
+*.pprof
+.env
+terraform.tfstate*
+.terraform.tfstate.lock.info
+.idea/
+.vscode/
+crash-detector/crash-detector
+results_unused/

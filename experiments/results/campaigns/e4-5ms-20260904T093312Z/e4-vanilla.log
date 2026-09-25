@@ -1,0 +1,24 @@
+campaign=experiments/results/campaigns/vanilla/20260904T094208Z-e4  n=300  cluster=10.132.15.198  mock=:8092
+mock call delay: 5ms (pass -delay-ms 0 for pure platform throughput)
+=== 50 req/s / vanilla (13m30s)
+    offered 50 req/s (issued 40500/40500), achieved 50.0 req/s
+=== 100 req/s / vanilla (13m30s)
+    offered 100 req/s (issued 81000/81000), achieved 100.0 req/s
+=== 150 req/s / vanilla (13m30s)
+    offered 150 req/s (issued 121492/121500), achieved 150.0 req/s
+=== 200 req/s / vanilla (13m30s)
+    offered 200 req/s (issued 161974/162000), achieved 200.0 req/s
+=== 250 req/s / vanilla (13m30s)
+    offered 250 req/s (issued 202414/202500), achieved 249.9 req/s
+=== 300 req/s / vanilla (13m30s)
+    offered 300 req/s (issued 242940/243000), achieved 299.9 req/s
+=== 350 req/s / vanilla (13m30s)
+    offered 350 req/s (issued 283415/283500), achieved 349.9 req/s
+=== 400 req/s / vanilla (13m30s)
+    offered 400 req/s (issued 323948/324000), achieved 399.9 req/s
+=== 450 req/s / vanilla (13m30s)
+    offered 450 req/s (issued 364379/364500), achieved 449.9 req/s
+=== 500 req/s / vanilla (13m30s)
+    offered 500 req/s (issued 404875/405000), achieved 499.8 req/s
+=== 550 req/s / vanilla (13m30s)
+    offered 550 req/s (issued 445394/445500), achieved 490.7 req/s

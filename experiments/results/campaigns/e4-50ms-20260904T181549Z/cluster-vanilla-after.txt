@@ -1,0 +1,8 @@
+ok    20 vanilla-extended pods ready (min-scale 20)
+ok    no pending pods
+ok    kourier: 1048576 open files allowed
+ok    kourier: 0 restarts
+ok    update timers off
+ok    ingress -> vanilla-extended: 200
+ok    kourier: no per-request access log
+info  node cpu requests: 4750m (59%)

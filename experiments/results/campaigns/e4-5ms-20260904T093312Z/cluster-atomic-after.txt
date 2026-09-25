@@ -1,0 +1,9 @@
+ok    20 atomic-extended pods ready (min-scale 20)
+ok    no pending pods
+FAIL  kourier: 32 container restarts
+ok    update timers off
+ok    redis: snapshotting off
+info  redis: used_memory_human:228.19M used_memory_peak_human:852.73M  keys: 189080
+ok    ingress -> atomic-extended: 200
+ok    kourier: no per-request access log
+info  node cpu requests: 7 (87%)

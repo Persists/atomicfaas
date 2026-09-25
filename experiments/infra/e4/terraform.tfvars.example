@@ -1,0 +1,20 @@
+project_id = "s-research"
+zone       = "europe-west3-a"
+
+# Three machines at e2-standard-8 is 24 of the default per-region CPU quota
+# of 32 vCPUs, so an unrelated VM already running in the region can make the
+# apply fail. Check the region's usage, not just its limit:
+#   gcloud compute regions list --format='table(name,quotas[0].usage,quotas[0].limit)'
+#
+# For the numbers you publish, do not shrink these: a starved cluster
+# inflates exactly what E4 measures, and a shared-core driver adds CPU-steal
+# jitter to the client clock -- which E4 records as latency.
+# cluster_machine_type = "e2-standard-8"
+# driver_machine_type  = "e2-standard-8"
+
+# Drive one cluster only (a smaller quota, or a re-run of one cell):
+# variants = ["atomic"]
+
+# Kourier's NodePort (bootstrap.sh) and the base port of the driver's per-variant mocks (bringup.sh).
+# ingress_node_port = 31080
+# mock_port_base    = 8090

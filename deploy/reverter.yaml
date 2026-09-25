@@ -1,0 +1,28 @@
+# Reverter: polls Redis and calls the provider over HTTP; needs no Kubernetes access.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reverter
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: reverter }
+  template:
+    metadata:
+      labels: { app: reverter }
+    spec:
+      containers:
+        - name: reverter
+          image: dev.local/atomic-faas/controllers:dev
+          imagePullPolicy: Never
+          # Request without limit: the walks must not queue behind function pods during a failure storm.
+          resources:
+            requests:
+              cpu: 200m
+              memory: 128Mi
+          command: ["/reverter"]
+          env:
+            - name: REDIS_ADDR
+              value: redis.default.svc.cluster.local:6379
+            - name: CATALOG
+              value: /catalog.json

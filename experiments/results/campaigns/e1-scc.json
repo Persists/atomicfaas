@@ -1,0 +1,22 @@
+{
+ "vanilla-simple": {
+  "lines": 54,
+  "code": 43,
+  "complexity": 9
+ },
+ "saga-simple": {
+  "lines": 90,
+  "code": 74,
+  "complexity": 10
+ },
+ "saga-extended": {
+  "lines": 112,
+  "code": 93,
+  "complexity": 12
+ },
+ "vanilla-extended": {
+  "lines": 69,
+  "code": 56,
+  "complexity": 11
+ }
+}

@@ -1,0 +1,10 @@
+ok    1 atomic-extended pods ready (min-scale 1)
+ok    no pending pods
+ok    kourier: 1048576 open files allowed
+ok    kourier: 0 restarts
+ok    update timers off
+ok    redis: snapshotting off
+info  redis: used_memory_human:1.72M used_memory_peak_human:2.33M  keys: 194
+ok    ingress -> atomic-extended: 200
+ok    kourier: no per-request access log
+info  node cpu requests: 4025m (50%)

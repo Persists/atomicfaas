@@ -1,0 +1,24 @@
+campaign=experiments/results/campaigns/atomic/20260904T094204Z-e4  n=300  cluster=10.132.15.197  mock=:8090
+mock call delay: 5ms (pass -delay-ms 0 for pure platform throughput)
+=== 50 req/s / atomic (13m30s)
+    offered 50 req/s (issued 40500/40500), achieved 50.0 req/s
+=== 100 req/s / atomic (13m30s)
+    offered 100 req/s (issued 81000/81000), achieved 100.0 req/s
+=== 150 req/s / atomic (13m30s)
+    offered 150 req/s (issued 121496/121500), achieved 150.0 req/s
+=== 200 req/s / atomic (13m30s)
+    offered 200 req/s (issued 161995/162000), achieved 200.0 req/s
+=== 250 req/s / atomic (13m30s)
+    offered 250 req/s (issued 202499/202500), achieved 250.0 req/s
+=== 300 req/s / atomic (13m30s)
+    offered 300 req/s (issued 242991/243000), achieved 300.0 req/s
+=== 350 req/s / atomic (13m30s)
+    offered 350 req/s (issued 283493/283500), achieved 324.7 req/s
+=== 400 req/s / atomic (13m30s)
+    offered 400 req/s (issued 323973/324000), achieved 293.5 req/s
+=== 450 req/s / atomic (13m30s)
+    offered 450 req/s (issued 364412/364500), achieved 279.9 req/s
+=== 500 req/s / atomic (13m30s)
+    offered 500 req/s (issued 404846/405000), achieved 289.5 req/s
+=== 550 req/s / atomic (13m30s)
+    offered 550 req/s (issued 445352/445500), achieved 289.8 req/s

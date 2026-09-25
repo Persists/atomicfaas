@@ -1,0 +1,28 @@
+# Extended trip-booking, vanilla mode: same code as atomic-extended, without the interceptor.
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: vanilla-extended
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/min-scale: "20"
+        autoscaling.knative.dev/target-burst-capacity: "0"
+        autoscaling.knative.dev/max-scale: "50" # a backstop just above the request budget, not a limit on serving pods
+    spec:
+      # Doubles as termination grace, so scaled-down pods free their CPU fast; no request nears 30s.
+      timeoutSeconds: 30
+      containerConcurrency: 1
+      containers:
+        - image: dev.local/atomic-faas/trip-fn:dev
+          imagePullPolicy: Never
+          # Request without limit: the scheduler admits only what the node can run, same for every variant.
+          resources:
+            requests:
+              cpu: 150m
+              memory: 160Mi
+          command: ["node", "/app/vanilla-extended.js"]
+          env:
+            - name: MOCK
+              value: http://mock-host:8090 # rewritten by mock-host.sh
